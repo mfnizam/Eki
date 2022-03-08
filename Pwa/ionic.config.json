@@ -1,0 +1,7 @@
+{
+  "name": "Eki",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

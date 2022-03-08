@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title><b>Eki Projek</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div id="container" class="h-full flex flex-col gap-4 p-4">
+    <div class="flex-1 rounded-xl overflow-hidden">
+      <div [chart]="chart" style="height: calc(100% + 2px)"></div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="rounded-xl p-4 flex flex-col items-center justify-center border" style="border-color: #e13838;">
+        <div class="text-3xl" style="color: #e13838;"><b>{{vpv | number:'1.2-2'}}<span class="text-xs">V</span></b></div>
+        <div><small>Tegangan PV</small></div>
+      </div>
+
+      <div class="rounded-xl p-4 flex flex-col items-center justify-center border" style="border-color: #073db7;">
+        <div class="text-3xl" style="color: #073db7;"><b>{{vbt | number:'1.2-2' }}<span class="text-xs">V</span></b></div>
+        <small>Tegangan Baterai</small>
+      </div>
+
+      <div class="rounded-xl p-4 flex flex-col items-center justify-center border" style="border-color: #e17e38;">
+        <div class="text-3xl" style="color: #e17e38;"><b>{{ipv | number:'1.2-2' }}<span class="text-xs">mA</span></b></div>
+        <small>Arus PV</small>
+      </div>
+
+      <div class="rounded-xl p-4 flex flex-col items-center justify-center border" style="border-color: #07d4b7;">
+        <div class="text-3xl" style="color: #07d4b7;"><b>{{ibt | number:'1.2-2' }}<span class="text-xs">mA</span></b></div>
+        <small>Arus Baterai</small>
+      </div>
+
+      <div class="rounded-xl p-4 flex flex-col items-center justify-center border" style="border-color: #63CBE1;">
+        <div class="text-3xl" style="color: #63CBE1;"><b>{{wpv | number:'1.2-2' }}<span class="text-xs">W</span></b></div>
+        <small>Daya PV</small>
+      </div>
+
+      <div class="rounded-xl p-4 flex flex-col items-center justify-center border" style="border-color: #417858;">
+        <div class="text-3xl" style="color: #417858;"><b>{{wbt | number:'1.2-2' }}<span class="text-xs">W</span></b></div>
+        <small>Daya Baterai</small>
+      </div>
+    </div>
+  </div>
+</ion-content>
